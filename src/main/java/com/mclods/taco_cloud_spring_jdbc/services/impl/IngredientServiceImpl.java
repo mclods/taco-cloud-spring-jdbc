@@ -5,6 +5,7 @@ import com.mclods.taco_cloud_spring_jdbc.repositories.IngredientRepository;
 import com.mclods.taco_cloud_spring_jdbc.services.IngredientService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,7 +19,14 @@ public class IngredientServiceImpl implements IngredientService {
 
     @Override
     public List<Ingredient> findAllIngredients() {
-        return ingredientRepository.findAll();
+        Iterable<Ingredient> ingredientsItr = ingredientRepository.findAll();
+        List<Ingredient> ingredientsList = new ArrayList<>();
+
+        for(Ingredient i : ingredientsItr) {
+            ingredientsList.add(i);
+        }
+
+        return ingredientsList;
     }
 
     @Override
