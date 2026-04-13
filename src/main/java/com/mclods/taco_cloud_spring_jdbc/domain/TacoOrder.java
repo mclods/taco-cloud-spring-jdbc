@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Table("taco_order")
 public class TacoOrder {
     @Id

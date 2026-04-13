@@ -13,8 +13,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Table("taco")
 public class Taco {
     @Id
@@ -26,10 +26,10 @@ public class Taco {
     @Column("name")
     private String name;
 
+    @Column("creation_date")
+    private LocalDateTime creationDate;
+
     @NotNull
     @Size(min = 1, message = "You must choose at least one ingredient")
     private List<Ingredient> ingredients;
-
-    @Column("creation_date")
-    private LocalDateTime creationDate;
 }
