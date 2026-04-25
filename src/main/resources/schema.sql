@@ -28,6 +28,6 @@ CREATE TABLE IF NOT EXISTS ingredient(
 
 CREATE TABLE IF NOT EXISTS taco_ingredient(
     taco_id INTEGER REFERENCES taco(id) ON DELETE CASCADE,
-    ingredient_id char(4) REFERENCES ingredient(id) ,
+    ingredient_id char(4) REFERENCES ingredient(id) ON DELETE CASCADE,
     PRIMARY KEY(taco_id, ingredient_id)
 );
