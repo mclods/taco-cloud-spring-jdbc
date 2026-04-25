@@ -31,7 +31,7 @@
         <section>
           <h3>Deliver my taco masterpieces to:</h3>
           <div class="container">
-            <div><label for="deliveryName">Name:</label></div>
+            <div><label th:for="*{deliveryName}">Name:</label></div>
             <input type="text" th:field="*{deliveryName}" placeholder="Name" />
             <span
               class="validation-error"
@@ -43,7 +43,7 @@
           </div>
           <div class="container">
             <div>
-              <label for="deliveryStreet">Street:</label>
+              <label th:for="*{deliveryStreet}">Street:</label>
             </div>
             <input
               type="text"
@@ -60,7 +60,7 @@
           </div>
           <div class="container">
             <div>
-              <label for="deliveryCity">City:</label>
+              <label th:for="*{deliveryCity}">City:</label>
             </div>
             <input type="text" th:field="*{deliveryCity}" placeholder="City" />
             <span
@@ -72,7 +72,7 @@
             </span>
           </div>
           <div class="container">
-            <div><label for="deliveryState">State:</label></div>
+            <div><label th:for="*{deliveryState}">State:</label></div>
             <input
               type="text"
               th:field="*{deliveryState}"
@@ -88,7 +88,7 @@
           </div>
           <div class="container">
             <div>
-              <label for="deliveryZip">Zip:</label>
+              <label th:for="*{deliveryZip}">Zip:</label>
             </div>
             <input type="text" th:field="*{deliveryZip}" placeholder="Zip" />
             <span
@@ -104,7 +104,7 @@
           <h3>Here's how I'll pay:</h3>
           <div class="container">
             <div>
-              <label for="ccNumber">Credit Card #:</label>
+              <label th:for="*{ccNumber}">Credit Card #:</label>
             </div>
             <input
               type="text"
@@ -121,7 +121,7 @@
           </div>
           <div class="container">
             <div>
-              <label for="ccExpiration">Expiration:</label>
+              <label th:for="*{ccExpiration}">Expiration:</label>
             </div>
             <input type="text" th:field="*{ccExpiration}" placeholder="MM/YY" />
             <span
@@ -134,7 +134,7 @@
           </div>
           <div class="container">
             <div>
-              <label for="ccCVV">CVV:</label>
+              <label th:for="*{ccCVV}">CVV:</label>
             </div>
             <input type="text" th:field="*{ccCVV}" placeholder="CVV" />
             <span
